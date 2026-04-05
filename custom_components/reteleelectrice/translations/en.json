@@ -1,0 +1,124 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Rețele Electrice",
+        "description": "Enter your contulmeu.reteleelectrice.ro email and password.",
+        "data": {
+          "username": "Email",
+          "password": "Password",
+          "update_interval": "Update interval (seconds)"
+        }
+      },
+      "select_pod": {
+        "title": "Select consumption points (POD)",
+        "description": "You can monitor all consumption points or only specific ones. Select what you want to track.",
+        "data": {
+          "select_all": "Monitor all consumption points",
+          "selected_pods": "Select desired consumption points"
+        }
+      }
+    },
+    "error": {
+      "auth_failed": "Authentication failed. Check your email and password.",
+      "no_data": "Authentication successful, but no data found for this account.",
+      "no_pod_selected": "You must select at least one consumption point or enable the option for all."
+    },
+    "abort": {
+      "already_configured": "This Rețele Electrice account is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Rețele Electrice Settings",
+        "description": "Select the category to manage",
+        "menu_options": {
+          "settings": "Account Settings",
+          "licenta": "License"
+        }
+      },
+      "settings": {
+        "title": "Account Settings",
+        "description": "Update your credentials and refresh interval.",
+        "data": {
+          "username": "Email",
+          "password": "Password",
+          "update_interval": "Update interval (seconds)"
+        }
+      },
+      "select_pod": {
+        "title": "Select consumption points (POD)",
+        "description": "Update the consumption points you want to monitor.",
+        "data": {
+          "select_all": "Monitor all consumption points",
+          "selected_pods": "Select desired consumption points"
+        }
+      },
+      "licenta": {
+        "title": "Rețele Electrice License",
+        "description": "{license_status}\n\nEnter your license key to activate or renew the integration.",
+        "data": {
+          "license_key": "License Key"
+        }
+      }
+    },
+    "error": {
+      "auth_failed": "Authentication failed. Check your email and password.",
+      "no_data": "Authentication successful, but no data found for this account.",
+      "no_pod_selected": "You must select at least one consumption point or enable the option for all.",
+      "license_key_empty": "Please enter a license key.",
+      "license_key_invalid": "Invalid license key. Check the format and try again.",
+      "license_already_used": "This license key has already been used on another installation.",
+      "license_key_expired": "This license key has expired.",
+      "license_fingerprint_mismatch": "This license key is bound to a different installation.",
+      "license_network_error": "Cannot connect to the license server. Check your internet connection.",
+      "license_server_error": "License server error. Please try again later."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "informatii_pod": {
+        "name": "POD"
+      },
+      "informatii_cont": {
+        "name": "User Details"
+      },
+      "index_citire_consum": {
+        "name": "Consumption Meter Reading"
+      },
+      "index_citire_productie": {
+        "name": "Production Meter Reading"
+      },
+      "arhiva_energie_consumata": {
+        "name": "Energy Consumed"
+      },
+      "arhiva_energie_produsa": {
+        "name": "Energy Produced"
+      },
+      "intreruperi_curent": {
+        "name": "Power Outages"
+      },
+      "smart_meter_consum": {
+        "name": "Smart Meter Consumption"
+      },
+      "smart_meter_productie": {
+        "name": "Smart Meter Production"
+      },
+      "valoare_instantanee_consum": {
+        "name": "Instant Value Consumption"
+      },
+      "valoare_instantanee_productie": {
+        "name": "Instant Value Production"
+      },
+      "date_furnizor": {
+        "name": "Supplier Data"
+      }
+    },
+    "button": {
+      "actualizare_instantanee": {
+        "name": "Refresh Instant Values"
+      }
+    }
+  }
+}
