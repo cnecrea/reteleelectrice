@@ -1,0 +1,110 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Conectare la Rețele Electrice",
+        "description": "Introduceți adresa de email și parola contului contulmeu.reteleelectrice.ro",
+        "data": {
+          "username": "Email",
+          "password": "Parolă",
+          "update_interval": "Interval actualizare (secunde)"
+        }
+      },
+      "select_pod": {
+        "title": "Selectați punctele de consum (POD)",
+        "description": "Puteți monitoriza toate punctele de consum sau doar cele dorite. Selectați ce doriți să urmăriți.",
+        "data": {
+          "select_all": "Monitorizează toate punctele de consum",
+          "selected_pods": "Selectați punctele de consum dorite"
+        }
+      }
+    },
+    "error": {
+      "auth_failed": "Autentificare eșuată. Verificați adresa de email și parola.",
+      "no_data": "Autentificare reușită, dar nu s-au găsit date pentru acest cont.",
+      "no_pod_selected": "Trebuie să selectați cel puțin un punct de consum sau să activați opțiunea pentru toate."
+    },
+    "abort": {
+      "already_configured": "Acest cont Rețele Electrice este deja configurat."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Setări Rețele Electrice",
+        "description": "Selectați categoria pe care doriți să o gestionați",
+        "menu_options": {
+          "settings": "Setări cont",
+          "licenta": "Licență"
+        }
+      },
+      "settings": {
+        "title": "Setări cont",
+        "description": "Actualizați credențialele și intervalul de actualizare.",
+        "data": {
+          "username": "Email",
+          "password": "Parolă",
+          "update_interval": "Interval actualizare (secunde)"
+        }
+      },
+      "select_pod": {
+        "title": "Selectați punctele de consum (POD)",
+        "description": "Actualizați punctele de consum pe care doriți să le monitorizați.",
+        "data": {
+          "select_all": "Monitorizează toate punctele de consum",
+          "selected_pods": "Selectați punctele de consum dorite"
+        }
+      },
+      "licenta": {
+        "title": "Licență Rețele Electrice",
+        "description": "{license_status}\n\nIntroduceți cheia de licență pentru a activa sau reînnoi integrarea.",
+        "data": {
+          "license_key": "Cheie de licență"
+        }
+      }
+    },
+    "error": {
+      "auth_failed": "Autentificare eșuată. Verificați adresa de email și parola.",
+      "no_data": "Autentificare reușită, dar nu s-au găsit date pentru acest cont.",
+      "no_pod_selected": "Trebuie să selectați cel puțin un punct de consum sau să activați opțiunea pentru toate.",
+      "license_key_empty": "Vă rugăm să introduceți o cheie de licență.",
+      "license_key_invalid": "Cheie de licență invalidă. Verificați formatul și încercați din nou.",
+      "license_already_used": "Această cheie de licență a fost deja utilizată pe altă instalare.",
+      "license_key_expired": "Această cheie de licență a expirat.",
+      "license_fingerprint_mismatch": "Această cheie de licență este asociată unei alte instalări.",
+      "license_network_error": "Nu se poate conecta la serverul de licențe. Verificați conexiunea la internet.",
+      "license_server_error": "Eroare server licențe. Vă rugăm să încercați mai târziu."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "informatii_pod": {
+        "name": "POD"
+      },
+      "informatii_cont": {
+        "name": "Date utilizator"
+      },
+      "index_citire_consum": {
+        "name": "Index citire consum"
+      },
+      "index_citire_productie": {
+        "name": "Index citire producție"
+      },
+      "arhiva_energie_consumata": {
+        "name": "Energie consumată"
+      },
+      "arhiva_energie_produsa": {
+        "name": "Energie produsă"
+      },
+      "intreruperi_curent": {
+        "name": "Întreruperi curent"
+      },
+      "smart_meter_consum": {
+        "name": "Smart Meter Consum"
+      },
+      "smart_meter_productie": {
+        "name": "Smart Meter Producție"
+      }
+    }
+  }
+}
