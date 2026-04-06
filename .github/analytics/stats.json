@@ -94,7 +94,7 @@
       "stars": 1,
       "forks": 0,
       "watchers": 0,
-      "open_issues": 0,
+      "open_issues": 1,
       "referrers": [
         {
           "sursa": "github.com",
@@ -124,5 +124,5 @@
     "1.1.0": 0,
     "1.0.0": 1
   },
-  "ultima_actualizare": "2026-04-06T06:53:29Z"
+  "ultima_actualizare": "2026-04-06T07:23:36Z"
 }
