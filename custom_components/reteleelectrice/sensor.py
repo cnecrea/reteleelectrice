@@ -240,9 +240,10 @@ class ReteleElectriceSensorBase(
         self._sensor_key = sensor_key
         self._attr_name = sensor_name
         self._attr_icon = icon
-        self._attr_unique_id = f"{DOMAIN}_{ctx.pod_name}_{sensor_key}"
+        pod_slug = ctx.pod_name.lower()
+        self._attr_unique_id = f"{DOMAIN}_{pod_slug}_{sensor_key}"
         self._custom_entity_id = (
-            f"sensor.{DOMAIN}_{ctx.pod_name}_{sensor_key}"
+            f"sensor.{DOMAIN}_{pod_slug}_{sensor_key}"
         )
 
     @property
@@ -1057,7 +1058,6 @@ class ValoareInstantaneeConsumSensor(ReteleElectriceSensorBase):
             sensor_name="Valoare instantanee consum",
             icon="mdi:flash",
         )
-        self._attr_unique_id = f"{DOMAIN}_{ctx.pod_name}_valoare_instantanee_consum"
 
     @property
     def native_value(self) -> float | None:
@@ -1151,7 +1151,6 @@ class ValoareInstantaneeProductieSensor(ReteleElectriceSensorBase):
             sensor_name="Valoare instantanee producție",
             icon="mdi:solar-power",
         )
-        self._attr_unique_id = f"{DOMAIN}_{ctx.pod_name}_valoare_instantanee_productie"
 
     @property
     def native_value(self) -> float | None:
@@ -1264,7 +1263,6 @@ class DateFurnizorSensor(ReteleElectriceSensorBase):
             sensor_name="Date furnizor",
             icon="mdi:office-building",
         )
-        self._attr_unique_id = f"{DOMAIN}_{ctx.pod_name}_date_furnizor"
 
     @property
     def native_value(self) -> str | None:
