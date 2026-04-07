@@ -96,18 +96,17 @@ class ActualizareInstantaneeButton(
         self._config_entry = config_entry
         self._account_name = account_name
         self._address = address
-        self._attr_unique_id = f"{DOMAIN}_{pod_name}_actualizare_instantanee"
+        self._attr_unique_id = f"{DOMAIN}_{pod_name.lower()}_actualizare_instantanee"
 
     @property
     def device_info(self) -> DeviceInfo:
         """Asociere la device-ul POD-ului."""
         return DeviceInfo(
             identifiers={(DOMAIN, self._pod_name)},
-            name=f"POD {self._pod_name}",
-            manufacturer="Rețele Electrice România",
-            model=self._pod_data.get("Contract_Type__c", "Standard"),
+            name=f"Rețele Electrice {self._pod_name}",
+            manufacturer="Ciprian Nicolae (cnecrea)",
+            model="Rețele Electrice România",
             entry_type=DeviceEntryType.SERVICE,
-            configuration_url="https://contulmeu.reteleelectrice.ro",
         )
 
     def _is_license_valid(self) -> bool:
