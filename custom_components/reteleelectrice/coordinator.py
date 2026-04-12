@@ -97,6 +97,14 @@ class ReteleElectriceCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             account_info = await self.api.async_get_account_info()
             contact_info = await self.api.async_get_contact_info()
 
+            # Dacă un apel de profil a eșuat, probabil sesiunea e invalidă — re-login + retry
+            if user_name is None or account_info is None or contact_info is None:
+                _LOGGER.debug("[ReteleElectrice] Date profil lipsă — reîncerc login...")
+                if await self.api.async_login():
+                    user_name = await self.api.async_get_user_name()
+                    account_info = await self.api.async_get_account_info()
+                    contact_info = await self.api.async_get_contact_info()
+
             # ── Lista POD-uri ──
             pods_raw = await self.api.async_get_pods()
             if not pods_raw or not isinstance(pods_raw, list):

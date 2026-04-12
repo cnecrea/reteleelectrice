@@ -746,11 +746,12 @@ class ReteleElectriceAPI:
                     return action_result.get("returnValue")
                 else:
                     error = action_result.get("error", [])
-                    _LOGGER.error(
+                    _LOGGER.warning(
                         "[ReteleElectrice] Aura action state=%s, error=%s",
                         state, error,
                     )
-                    return {"state": state, "error": error}
+                    self._logged_in = False
+                    return None
 
             return data
 
