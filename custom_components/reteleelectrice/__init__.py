@@ -201,7 +201,13 @@ async def async_setup_entry(hass: HomeAssistant, entry: ReteleElectriceConfigEnt
         )
 
     coordinator = ReteleElectriceCoordinator(hass, entry)
-    await coordinator.async_config_entry_first_refresh()
+    try:
+        await coordinator.async_config_entry_first_refresh()
+    except Exception as err:
+        _LOGGER.error(
+            "[ReteleElectrice] Prima actualizare eșuată: %s", err
+        )
+        raise
 
     # Stocăm coordinator-ul direct pe entry (pattern modern)
     entry.runtime_data = coordinator

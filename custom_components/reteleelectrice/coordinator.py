@@ -24,7 +24,7 @@ from homeassistant.helpers.update_coordinator import (
 )
 
 from .api import ReteleElectriceAPI
-from .const import DEFAULT_UPDATE, DOMAIN
+from .const import DEFAULT_UPDATE, DOMAIN, LICENSE_DATA_KEY
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -78,6 +78,12 @@ class ReteleElectriceCoordinator(DataUpdateCoordinator[dict[str, Any]]):
 
     async def _async_update_data(self) -> dict[str, Any]:
         """Fetch periodic — colectează datele pentru POD-urile selectate."""
+        # Verificare licență — nu fetchuim date dacă licența/trial nu e validă
+        license_mgr = self.hass.data.get(DOMAIN, {}).get(LICENSE_DATA_KEY)
+        if license_mgr and not license_mgr.is_valid:
+            _LOGGER.debug("[ReteleElectrice] Licență invalidă — se omit apelurile API")
+            return self.data or {}
+
         _LOGGER.debug("[ReteleElectrice] Începe actualizarea datelor")
 
         try:
