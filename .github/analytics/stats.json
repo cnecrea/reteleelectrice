@@ -1732,6 +1732,24 @@
           "vizitatori_unici": 2
         }
       ]
+    },
+    "2026-05-17": {
+      "stars": 5,
+      "forks": 0,
+      "watchers": 0,
+      "open_issues": 0,
+      "referrers": [
+        {
+          "sursa": "github.com",
+          "vizite": 10,
+          "vizitatori_unici": 9
+        },
+        {
+          "sursa": "lm.facebook.com",
+          "vizite": 2,
+          "vizitatori_unici": 2
+        }
+      ]
     }
   },
   "releases": {
@@ -1744,5 +1762,5 @@
     "1.1.0": 0,
     "1.0.0": 3
   },
-  "ultima_actualizare": "2026-05-16T07:57:33Z"
+  "ultima_actualizare": "2026-05-17T08:14:31Z"
 }
