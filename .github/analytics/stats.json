@@ -2479,6 +2479,39 @@
           "vizitatori_unici": 1
         }
       ]
+    },
+    "2026-06-12": {
+      "stars": 6,
+      "forks": 0,
+      "watchers": 0,
+      "open_issues": 1,
+      "referrers": [
+        {
+          "sursa": "hubinteligent.org",
+          "vizite": 3,
+          "vizitatori_unici": 3
+        },
+        {
+          "sursa": "github.com",
+          "vizite": 3,
+          "vizitatori_unici": 2
+        },
+        {
+          "sursa": "Google",
+          "vizite": 2,
+          "vizitatori_unici": 1
+        },
+        {
+          "sursa": "l.facebook.com",
+          "vizite": 1,
+          "vizitatori_unici": 1
+        },
+        {
+          "sursa": "lm.facebook.com",
+          "vizite": 1,
+          "vizitatori_unici": 1
+        }
+      ]
     }
   },
   "releases": {
@@ -2491,5 +2524,5 @@
     "1.1.0": 0,
     "1.0.0": 3
   },
-  "ultima_actualizare": "2026-06-11T10:15:27Z"
+  "ultima_actualizare": "2026-06-12T10:03:06Z"
 }
