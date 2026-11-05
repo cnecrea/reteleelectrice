@@ -2,78 +2,78 @@
   "config": {
     "step": {
       "user": {
-        "title": "Conectare la Rețele Electrice",
-        "description": "Introduceți adresa de email și parola contului contulmeu.reteleelectrice.ro",
+        "title": "Connect to Rețele Electrice",
+        "description": "Enter your contulmeu.reteleelectrice.ro email and password.",
         "data": {
           "username": "Email",
-          "password": "Parolă",
-          "update_interval": "Interval actualizare (secunde)"
+          "password": "Password",
+          "update_interval": "Update interval (seconds)"
         }
       },
       "select_pod": {
-        "title": "Selectați punctele de consum (POD)",
-        "description": "Puteți monitoriza toate punctele de consum sau doar cele dorite. Selectați ce doriți să urmăriți.",
+        "title": "Select consumption points (POD)",
+        "description": "You can monitor all consumption points or only specific ones. Select what you want to track.",
         "data": {
-          "select_all": "Monitorizează toate punctele de consum",
-          "selected_pods": "Selectați punctele de consum dorite"
+          "select_all": "Monitor all consumption points",
+          "selected_pods": "Select desired consumption points"
         }
       }
     },
     "error": {
-      "auth_failed": "Autentificare eșuată. Verificați adresa de email și parola.",
-      "no_data": "Autentificare reușită, dar nu s-au găsit date pentru acest cont.",
-      "no_pod_selected": "Trebuie să selectați cel puțin un punct de consum sau să activați opțiunea pentru toate."
+      "auth_failed": "Authentication failed. Check your email and password.",
+      "no_data": "Authentication successful, but no data found for this account.",
+      "no_pod_selected": "You must select at least one consumption point or enable the option for all."
     },
     "abort": {
-      "already_configured": "Acest cont Rețele Electrice este deja configurat."
+      "already_configured": "This Rețele Electrice account is already configured."
     }
   },
   "options": {
     "step": {
       "init": {
-        "title": "Setări Rețele Electrice",
-        "description": "Selectați categoria pe care doriți să o gestionați",
+        "title": "Rețele Electrice Settings",
+        "description": "Select the category to manage",
         "menu_options": {
-          "settings": "Setări cont",
-          "licenta": "Licență"
+          "settings": "Account Settings",
+          "licenta": "License"
         }
       },
       "settings": {
-        "title": "Setări cont",
-        "description": "Actualizați credențialele și intervalul de actualizare.",
+        "title": "Account Settings",
+        "description": "Update your credentials and refresh interval.",
         "data": {
           "username": "Email",
-          "password": "Parolă",
-          "update_interval": "Interval actualizare (secunde)"
+          "password": "Password",
+          "update_interval": "Update interval (seconds)"
         }
       },
       "select_pod": {
-        "title": "Selectați punctele de consum (POD)",
-        "description": "Actualizați punctele de consum pe care doriți să le monitorizați.",
+        "title": "Select consumption points (POD)",
+        "description": "Update the consumption points you want to monitor.",
         "data": {
-          "select_all": "Monitorizează toate punctele de consum",
-          "selected_pods": "Selectați punctele de consum dorite"
+          "select_all": "Monitor all consumption points",
+          "selected_pods": "Select desired consumption points"
         }
       },
       "licenta": {
-        "title": "Licență Rețele Electrice",
-        "description": "{license_status}\n\nIntroduceți cheia de licență pentru a activa sau reînnoi integrarea.",
+        "title": "Rețele Electrice License",
+        "description": "{license_status}\n\nEnter your license key to activate or renew the integration.",
         "data": {
-          "license_key": "Cheie de licență"
+          "license_key": "License Key"
         }
       }
     },
     "error": {
-      "auth_failed": "Autentificare eșuată. Verificați adresa de email și parola.",
-      "no_data": "Autentificare reușită, dar nu s-au găsit date pentru acest cont.",
-      "no_pod_selected": "Trebuie să selectați cel puțin un punct de consum sau să activați opțiunea pentru toate.",
-      "license_key_empty": "Vă rugăm să introduceți o cheie de licență.",
-      "license_key_invalid": "Cheie de licență invalidă. Verificați formatul și încercați din nou.",
-      "license_already_used": "Această cheie de licență a fost deja utilizată pe altă instalare.",
-      "license_key_expired": "Această cheie de licență a expirat.",
-      "license_fingerprint_mismatch": "Această cheie de licență este asociată unei alte instalări.",
-      "license_network_error": "Nu se poate conecta la serverul de licențe. Verificați conexiunea la internet.",
-      "license_server_error": "Eroare server licențe. Vă rugăm să încercați mai târziu.",
+      "auth_failed": "Authentication failed. Check your email and password.",
+      "no_data": "Authentication successful, but no data found for this account.",
+      "no_pod_selected": "You must select at least one consumption point or enable the option for all.",
+      "license_key_empty": "Please enter a license key.",
+      "license_key_invalid": "Invalid license key. Check the format and try again.",
+      "license_already_used": "This license key has already been used on another installation.",
+      "license_key_expired": "This license key has expired.",
+      "license_fingerprint_mismatch": "This license key is bound to a different installation.",
+      "license_network_error": "Cannot connect to the license server. Check your internet connection.",
+      "license_server_error": "License server error. Please try again later.",
       "already_configured": "This account is already configured in another entry."
     }
   },
@@ -83,42 +83,42 @@
         "name": "POD"
       },
       "informatii_cont": {
-        "name": "Date utilizator"
+        "name": "User Details"
       },
       "index_citire_consum": {
-        "name": "Index citire consum"
+        "name": "Consumption Meter Reading"
       },
       "index_citire_productie": {
-        "name": "Index citire producție"
+        "name": "Production Meter Reading"
       },
       "arhiva_energie_consumata": {
-        "name": "Energie consumată"
+        "name": "Energy Consumed"
       },
       "arhiva_energie_produsa": {
-        "name": "Energie produsă"
+        "name": "Energy Produced"
       },
       "intreruperi_curent": {
-        "name": "Întreruperi curent"
+        "name": "Power Outages"
       },
       "smart_meter_consum": {
-        "name": "Smart Meter Consum"
+        "name": "Smart Meter Consumption"
       },
       "smart_meter_productie": {
-        "name": "Smart Meter Producție"
+        "name": "Smart Meter Production"
       },
       "valoare_instantanee_consum": {
-        "name": "Valoare instantanee consum"
+        "name": "Instant Value Consumption"
       },
       "valoare_instantanee_productie": {
-        "name": "Valoare instantanee producție"
+        "name": "Instant Value Production"
       },
       "date_furnizor": {
-        "name": "Date furnizor"
+        "name": "Supplier Data"
       }
     },
     "button": {
       "actualizare_instantanee": {
-        "name": "Actualizare valori instantanee"
+        "name": "Refresh Instant Values"
       }
     }
   },
