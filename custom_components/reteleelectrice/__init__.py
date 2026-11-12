@@ -50,19 +50,26 @@ def _update_license_notifications(hass: HomeAssistant, mgr: LicenseManager) -> N
 
     if mgr.has_license:
         issue_id = "license_expired"
-        notif_title = "Rețele Electrice — Licența a expirat"
+        notif_title = "Licența Rețele Electrice a expirat"
         notif_message = (
-            "Licența pentru integrarea **Rețele Electrice** a expirat.\n\n"
-            "Senzorii sunt dezactivați până la reînnoirea licenței.\n\n"
-            f"[Reînnoiește licența]({LICENSE_PURCHASE_URL})"
+            "Senzorii integrării **Rețele Electrice** nu se mai actualizează până la reînnoirea licenței.\n\n"
+            f"[Obține o licență nouă]({LICENSE_PURCHASE_URL})"
+        )
+    elif mgr.status == "expired":
+        issue_id = "trial_expired"
+        notif_title = "Perioada de test Rețele Electrice s-a încheiat"
+        notif_message = (
+            "Senzorii integrării **Rețele Electrice** nu se mai actualizează până la activarea unei licențe.\n\n"
+            f"[Obține o licență]({LICENSE_PURCHASE_URL})"
         )
     else:
+        # „unlicensed”: nicio licență activă sau licența nu a putut fi verificată
         issue_id = "trial_expired"
-        notif_title = "Rețele Electrice — Licența de probă a expirat"
+        notif_title = "Licența Rețele Electrice nu este activă"
         notif_message = (
-            "Perioada de evaluare gratuită pentru integrarea **Rețele Electrice** s-a încheiat.\n\n"
-            "Senzorii sunt dezactivați până la obținerea unei licențe.\n\n"
-            f"[Obține o licență acum]({LICENSE_PURCHASE_URL})"
+            "Integrarea **Rețele Electrice** nu are o licență activă sau licența nu a putut fi verificată, așa că senzorii "
+            "nu se actualizează. Cheia se introduce în Configurare → Licență.\n\n"
+            f"[Obține o licență]({LICENSE_PURCHASE_URL})"
         )
 
     other_id = "license_expired" if issue_id == "trial_expired" else "trial_expired"

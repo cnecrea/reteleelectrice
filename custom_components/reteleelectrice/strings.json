@@ -2,78 +2,81 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to Rețele Electrice",
-        "description": "Enter your contulmeu.reteleelectrice.ro email and password.",
+        "title": "Conectare la Rețele Electrice",
+        "description": "Introduceți adresa de email și parola contului contulmeu.reteleelectrice.ro",
         "data": {
           "username": "Email",
-          "password": "Password",
-          "update_interval": "Update interval (seconds)"
+          "password": "Parolă",
+          "update_interval": "Interval actualizare (secunde)"
         }
       },
       "select_pod": {
-        "title": "Select consumption points (POD)",
-        "description": "You can monitor all consumption points or only specific ones. Select what you want to track.",
+        "title": "Selectați punctele de consum (POD)",
+        "description": "Puteți monitoriza toate punctele de consum sau doar cele dorite. Selectați ce doriți să urmăriți.",
         "data": {
-          "select_all": "Monitor all consumption points",
-          "selected_pods": "Select desired consumption points"
+          "select_all": "Monitorizează toate punctele de consum",
+          "selected_pods": "Selectați punctele de consum dorite"
         }
       }
     },
     "error": {
-      "auth_failed": "Authentication failed. Check your email and password.",
-      "no_data": "Authentication successful, but no data found for this account.",
-      "no_pod_selected": "You must select at least one consumption point or enable the option for all."
+      "auth_failed": "Autentificare eșuată. Verificați adresa de email și parola.",
+      "no_data": "Autentificare reușită, dar nu s-au găsit date pentru acest cont.",
+      "no_pod_selected": "Trebuie să selectați cel puțin un punct de consum sau să activați opțiunea pentru toate."
     },
     "abort": {
-      "already_configured": "This Rețele Electrice account is already configured."
+      "already_configured": "Acest cont Rețele Electrice este deja configurat."
     }
   },
   "options": {
     "step": {
       "init": {
-        "title": "Rețele Electrice Settings",
-        "description": "Select the category to manage",
+        "title": "Setări Rețele Electrice",
+        "description": "Selectați categoria pe care doriți să o gestionați",
         "menu_options": {
-          "settings": "Account Settings",
-          "licenta": "License"
+          "settings": "Setări cont",
+          "licenta": "Licență"
         }
       },
       "settings": {
-        "title": "Account Settings",
-        "description": "Update your credentials and refresh interval.",
+        "title": "Setări cont",
+        "description": "Actualizați credențialele și intervalul de actualizare.",
         "data": {
           "username": "Email",
-          "password": "Password",
-          "update_interval": "Update interval (seconds)"
+          "password": "Parolă",
+          "update_interval": "Interval actualizare (secunde)"
         }
       },
       "select_pod": {
-        "title": "Select consumption points (POD)",
-        "description": "Update the consumption points you want to monitor.",
+        "title": "Selectați punctele de consum (POD)",
+        "description": "Actualizați punctele de consum pe care doriți să le monitorizați.",
         "data": {
-          "select_all": "Monitor all consumption points",
-          "selected_pods": "Select desired consumption points"
+          "select_all": "Monitorizează toate punctele de consum",
+          "selected_pods": "Selectați punctele de consum dorite"
         }
       },
       "licenta": {
-        "title": "Rețele Electrice License",
-        "description": "{license_status}\n\nEnter your license key to activate or renew the integration.",
+        "title": "Rețele Electrice license",
+        "description": "{license_status}\n\nEnter the license key you received by email.",
         "data": {
-          "license_key": "License Key"
+          "license_key": "License key"
+        },
+        "data_description": {
+          "license_key": "The key from your license email, in the form RETE-XXXX-XXXX-XXXX-XXXX."
         }
       }
     },
     "error": {
-      "auth_failed": "Authentication failed. Check your email and password.",
-      "no_data": "Authentication successful, but no data found for this account.",
-      "no_pod_selected": "You must select at least one consumption point or enable the option for all.",
-      "license_key_empty": "Please enter a license key.",
-      "license_key_invalid": "Invalid license key. Check the format and try again.",
-      "license_already_used": "This license key has already been used on another installation.",
+      "auth_failed": "Autentificare eșuată. Verificați adresa de email și parola.",
+      "no_data": "Autentificare reușită, dar nu s-au găsit date pentru acest cont.",
+      "no_pod_selected": "Trebuie să selectați cel puțin un punct de consum sau să activați opțiunea pentru toate.",
+      "license_key_empty": "Enter the license key.",
+      "license_key_invalid": "This key is not valid for Rețele Electrice. Copy the whole key from the email: keys for this integration start with RETE-.",
+      "license_already_used": "This key is active on another Home Assistant instance. The license email address receives a link to move it; after you confirm, enter the key here again.",
       "license_key_expired": "This license key has expired.",
-      "license_fingerprint_mismatch": "This license key is bound to a different installation.",
-      "license_network_error": "Cannot connect to the license server. Check your internet connection.",
-      "license_server_error": "License server error. Please try again later.",
+      "license_fingerprint_mismatch": "Activation could not be confirmed for this instance. Try again; if the message repeats, use the “License problem” form.",
+      "license_network_error": "The license server cannot be reached. Check that Home Assistant has internet access and try again.",
+      "license_server_error": "The license server could not check the key right now. Try again in a few minutes.",
       "already_configured": "This account is already configured in another entry."
     }
   },
@@ -83,53 +86,53 @@
         "name": "POD"
       },
       "informatii_cont": {
-        "name": "User Details"
+        "name": "Date utilizator"
       },
       "index_citire_consum": {
-        "name": "Consumption Meter Reading"
+        "name": "Index citire consum"
       },
       "index_citire_productie": {
-        "name": "Production Meter Reading"
+        "name": "Index citire producție"
       },
       "arhiva_energie_consumata": {
-        "name": "Energy Consumed"
+        "name": "Energie consumată"
       },
       "arhiva_energie_produsa": {
-        "name": "Energy Produced"
+        "name": "Energie produsă"
       },
       "intreruperi_curent": {
-        "name": "Power Outages"
+        "name": "Întreruperi curent"
       },
       "smart_meter_consum": {
-        "name": "Smart Meter Consumption"
+        "name": "Smart Meter Consum"
       },
       "smart_meter_productie": {
-        "name": "Smart Meter Production"
+        "name": "Smart Meter Producție"
       },
       "valoare_instantanee_consum": {
-        "name": "Instant Value Consumption"
+        "name": "Valoare instantanee consum"
       },
       "valoare_instantanee_productie": {
-        "name": "Instant Value Production"
+        "name": "Valoare instantanee producție"
       },
       "date_furnizor": {
-        "name": "Supplier Data"
+        "name": "Date furnizor"
       }
     },
     "button": {
       "actualizare_instantanee": {
-        "name": "Refresh Instant Values"
+        "name": "Actualizare valori instantanee"
       }
     }
   },
   "issues": {
     "trial_expired": {
-      "title": "Trial expired — Rețele Electrice",
-      "description": "The free trial period has ended.\n\nSensors are disabled until a license is obtained.\n\n[Get a license now]({learn_more_url})"
+      "title": "The Rețele Electrice free trial has ended",
+      "description": "Sensors stop updating until a license is activated.\n\n[Get a license]({learn_more_url})"
     },
     "license_expired": {
-      "title": "License expired — Rețele Electrice",
-      "description": "The license for this integration has expired.\n\nSensors are disabled until the license is renewed.\n\n[Renew license]({learn_more_url})"
+      "title": "The Rețele Electrice license has expired",
+      "description": "Sensors stop updating until the license is renewed.\n\n[Get a new license]({learn_more_url})"
     }
   }
 }
